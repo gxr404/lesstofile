@@ -1,0 +1,11 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#0F341D",
+        "titleBar.activeBackground": "#154929",
+        "titleBar.activeForeground": "#F3FCF7"
+    },
+    "cSpell.words": [
+        "lesstowxss"
+    ],
+    "cmake.configureOnOpen": false
+}
