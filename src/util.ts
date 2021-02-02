@@ -47,6 +47,7 @@ const logHelp = (): void => {
         options: {
             '--dist': '目标目录',
             '--initCompile': '是否初始编译',
+            '--ext': '生成的后缀名 default wxss',
             '--help': '查看帮助'
         }
     }

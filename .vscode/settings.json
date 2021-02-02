@@ -5,7 +5,8 @@
         "titleBar.activeForeground": "#F3FCF7"
     },
     "cSpell.words": [
-        "lesstowxss"
+        "lesstowxss",
+        "wxss"
     ],
     "cmake.configureOnOpen": false
 }
