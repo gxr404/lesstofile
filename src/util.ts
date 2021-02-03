@@ -37,41 +37,7 @@ const titleCase: TTitleCase = (str) => str.replace(
     }
 )
 
-/**
- * 打印help
- */
-const logHelp = (): void => {
-    const doc = {
-        description: 'less to wxss',
-        usage: 'lesstowxss [options] [entry]',
-        options: {
-            '--dist': '目标目录',
-            '--initCompile': '是否初始编译',
-            '--ext': '生成的后缀名 default wxss',
-            '--help': '查看帮助'
-        }
-    }
-    const logItem = (key = '', data = {}, indent = 0) => {
-        const indentText = Array(indent).fill(' ').join('')
-        console.log(`${indentText}${titleCase(key)}: ${data[key]}`)
-        console.log()
-    }
-
-    const log = (data, indent = 0) => {
-        const docKey = Object.keys(data)
-        docKey.forEach((key) => {
-            if (typeof data[key] === 'object' && data[key] !== null) {
-                log(data[key], 4)
-            } else {
-                logItem(key, data, indent)
-            }
-        })
-    }
-    log(doc)
-}
-
 export {
     getArgs,
-    titleCase,
-    logHelp
+    titleCase
 }

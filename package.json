@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "tsc -p tsconfig.json -w",
-    "test": "node bin\\lesstowxss.js --dist .//test --watch"
+    "test": "node bin\\lesstowxss.js --dist ./test2 --watch"
   },
   "author": "",
   "license": "ISC",
