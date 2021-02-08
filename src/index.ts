@@ -75,7 +75,7 @@ class LessToFile {
         if (!isInitCompile) loading.show('扫描中...')
 
         const watchPath = this.options.dist
-        const isWatch = Boolean(this.options.watch)
+        const isWatch = this.options.watch !== 'false'
 
         // 默认输出wxss文件
         if (typeof this.options.ext !== 'string') {
@@ -114,6 +114,7 @@ class LessToFile {
                 '-d --dist': '目标目录',
                 '-i --init': '是否初始编译 default=false',
                 '-e --ext': '生成的后缀名 default=wxss',
+                '-w --watch': '是否监听目录 default=true',
                 '-h --help': '查看帮助'
             }
         }
@@ -141,19 +142,6 @@ class LessToFile {
     compileLess(filePath: string, cb: TCompileLessCallback) {
         const pathParse = path.parse(filePath)
         const lessContext = fs.readFileSync(filePath, 'utf8')
-        // {
-        //     main: true,
-        //     out: true,
-        //     outExt: true,
-        //     sourceMap: true,
-        //     sourceMapFileInline: true,
-        //     compress: true,
-        //     relativeUrls: true,
-        //     ieCompat: true,
-        //     autoprefixer: true,
-        //     javascriptEnabled: true,
-        //     math: true,
-        // }
         const lessRenderOption: Less.Options = {
             filename: filePath,
             paths: [pathParse.dir],
@@ -251,7 +239,6 @@ class LessToFile {
         }
         console.error(`× Error: ${err.filename}:${err.line}:${err.column}`)
         console.error(` --${err.message}\n`)
-        // console.error(JSON.stringify(err.extract, null, 2))
     }
 
 }
