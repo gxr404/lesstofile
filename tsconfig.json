@@ -8,6 +8,7 @@
         "esModuleInterop": true,
         "moduleResolution": "node",
         "baseUrl": ".",
-        "types": [ "node" ]
+        "types": [ "node" ],
+        "noImplicitAny": true,
     }
 }

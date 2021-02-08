@@ -8,7 +8,12 @@
             "type": "node",
             "request": "launch",
             "name": "启动程序",
-            "program": "${workspaceFolder}\\test.js",
+            "program": "${workspaceFolder}\\bin\\lesstowxss.js",
+            "args": [
+                "--dist",
+                "./test",
+                "--watch"
+            ]
         }
     ]
 }

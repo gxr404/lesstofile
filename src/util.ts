@@ -1,16 +1,20 @@
+interface AnyObject {
+    [key: string]: any
+}
+
 /**
  * 获取参数
  */
 type TGetArgs = (argv: Array<any>) => { [key: string]: boolean | string }
 const getArgs: TGetArgs = (argv = []) => {
     const rawList = argv.slice(2)
-    const optionsKeyReg = /^--(.*)/
-    const isOptionsKey = (val) => optionsKeyReg.test(val)
-    const args = {}
+    const optionsKeyReg = /^--(.*)|-(.*)/
+    const isOptionsKey = (val: string) => optionsKeyReg.test(val)
+    const args: AnyObject = {}
     let index = 0
     while (index < rawList.length) {
         if (isOptionsKey(rawList[index])) {
-            const key = rawList[index].replace(optionsKeyReg, '$1')
+            const key: string = rawList[index].replace(optionsKeyReg, '$1')
             index += 1
             let value: boolean | string = true
             if (rawList[index] && !isOptionsKey(rawList[index])) {
