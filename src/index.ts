@@ -108,8 +108,8 @@ class LessToFile {
      */
     logHelp() {
         const doc = {
-            description: 'less to wxss',
-            usage: 'lesstowxss [options] [entry]',
+            description: 'less to file',
+            usage: 'lesstofile [options] [entry]',
             options: {
                 '-d --dist': '目标目录',
                 '-i --init': '是否初始编译 default=false',

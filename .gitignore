@@ -1,8 +1,5 @@
 .history
 node_modules
 dist
-test - 副本
-*.png
-*.jpg
-*.gif
 test
+.vscode
