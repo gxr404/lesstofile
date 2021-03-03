@@ -1,17 +1,24 @@
 {
   "name": "lesstofile",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "less to file",
-  "main": "index.js",
   "bin": {
-    "lesstofile": "bin/lesstofile"
+    "lesstofile": "./bin/lesstofile.js"
   },
   "scripts": {
     "dev": "tsc -p tsconfig.json -w",
     "build": "tsc -p tsconfig.json"
   },
-  "author": "",
+  "keywords": [
+    "less",
+    "less to file",
+    "wxss",
+    "acss",
+    "ttss"
+  ],
+  "author": "gxr404",
   "license": "ISC",
+  "homepage": "https://github.com/gxr404/lesstofile",
   "dependencies": {
     "chokidar": "^3.5.1",
     "less": "^4.1.0",

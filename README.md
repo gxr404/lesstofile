@@ -1,5 +1,11 @@
 # lessToFile
 
+## 开始
+```sh
+npm i -g lesstofile
+```
+
+## 介绍
 - 支持监听目录 less文件 输出 wxss文件或自定义文件后缀名
 - 支持@import引入的文件 改动 当前文件父文件也编译
 
@@ -17,4 +23,10 @@ Usage: lesstofile [options] [entry]
     -w --watch: 是否监听目录 default=true
 
     -h --help: 查看帮助
+```
+
+eg:
+
+```sh
+lesstofile -d lessdir
 ```
