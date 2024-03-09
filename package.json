@@ -1,6 +1,6 @@
 {
   "name": "lesstofile",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "less to file",
   "bin": {
     "lesstofile": "./bin/lesstofile.js"
@@ -19,6 +19,10 @@
   "author": "gxr404",
   "license": "ISC",
   "homepage": "https://github.com/gxr404/lesstofile",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gxr404/lesstofile.git"
+  },
   "dependencies": {
     "chokidar": "^3.5.1",
     "less": "^4.1.0",
